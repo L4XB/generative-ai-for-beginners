@@ -81,6 +81,12 @@ const shoppingListMessage =
 
     })
 
+if (shoppingListMessage.status !== "200") {
+    throw shoppingListMessage.body.error;
+}
+console.log("\n ===== Shopping List ===== \n");
+console.log(shoppingListMessage.body.choices[0].message.content);
+
 } catch (error) {
     console.log('The sample encountered an error: ', error);
 }
