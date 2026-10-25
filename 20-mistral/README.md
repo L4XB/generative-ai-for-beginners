@@ -231,7 +231,7 @@ In this sample, we will look at how Mistral NeMo handles tokenization compared t
 Both samples take the same prompt but you should see that NeMo returns fewer tokens than Mistral Large. 
 
 ```bash
-pip install mistral-common
+pip install "mistral-common[sentencepiece]<1.13"
 ```
 
 ```python 
@@ -248,7 +248,7 @@ from mistral_common.tokens.tokenizers.mistral import MistralTokenizer
 
 # Load Mistral tokenizer
 
-model_name = "open-mistral-nemo"
+model_name = "open-mistral-nemo-2407"
 
 tokenizer = MistralTokenizer.from_model(model_name)
 
@@ -304,7 +304,7 @@ from mistral_common.tokens.tokenizers.mistral import MistralTokenizer
 
 # Load Mistral tokenizer
 
-model_name = "mistral-large-latest"
+model_name = "mistral-large-2407"
 
 tokenizer = MistralTokenizer.from_model(model_name)
 
